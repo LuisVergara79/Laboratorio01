@@ -53,12 +53,17 @@ flowchart TD
 ### 1. Landing Page E-Commerce (`apps/ecommerce`)
 * **Tecnología**: Astro 4.x (Generación Estática de alto rendimiento).
 * **Ruta de Acceso**: `/`
+* **Referencia de Diseño Visual**: Basada en la maqueta de alta conversión ubicada en `assets-references\imagenes\imagen001.jpg`.
 * **Características Principales**:
-  * **Hero Section Comercial**: Propuesta de valor de hamburguesas a la leña de roble, pan brioche de autor y entrega en 20 minutos con métricas de satisfacción (4.9 ★).
-  * **Catálogo de 10 Variantes Destacadas**: Fichas individuales con fotografía gastronómica en alta definición, descripción artesanal, precios e insignias de especialidad.
-  * **Filtrado Dinámico**: Categorización instantánea sin recarga de página (*Todas, Especiales de la Casa, Clásicas & Dobles, Gourmet & Pollo*).
-  * **Modal de Ficha Técnica ("Ver Detalles")**: Despliega ingredientes de autor en etiquetas (*chips*), tiempos estimados de preparación, conteo calórico y botón de acción para transferir la orden directamente a la PWA.
+  * **Estilo Visual & Paleta Dark & Gold**: Diseño premium en fondo oscuro (`#070708`) con acentos en amarillo cheddar y oro cálido (`#ffb703`), botones píldora (*pill buttons*) y tipografías *Montserrat*, *Plus Jakarta Sans* y script *Caveat*.
+  * **Hero Section Comercial ("Good Food Fast & Fresh")**: Propuesta de valor de alto impacto con script decorativo (*"Cravings, Satisfied"*), insignia circular flotante (*"100% Fresh Ingredients"*), botón de acción rápida `ORDER NOW →`, enlace para ver video y cintillo de beneficios (*Fast Delivery, Best Quality, Great Offers*).
+  * **Barra Flotante de Categorías**: Card flotante en blanco puro con elevación tridimensional que destaca accesos rápidos a *Burgers, Fries, Pizza, Drinks, Chicken y Desserts*.
+  * **Bestsellers ("Our Bestsellers")**: Catálogo de creaciones con tarjetas oscuras, fotografía gastronómica, insignias de especialidad, precios destacados en amarillo y botones circulares de adición rápida `+`.
+  * **Banner Promocional Integrado**: Card dorado con reloj animado (*"Hungry? We Deliver Fast!"*), descuento del 20% en primera compra con cupón `WELCOME20` y arte de repartidor en scooter.
+  * **Filtrado Dinámico**: Categorización instantánea sin recarga de página (*All Items, Burgers & Fries, Pizzas & Specials, Chicken & Gourmet*).
+  * **Modal Interactivo de Ficha Técnica**: Despliega ingredientes de autor en etiquetas (*chips*), tiempos estimados de preparación, conteo calórico y botón para transferir el pedido a la PWA.
   * **Sección de Calidad y Confianza**: Bloques explicativos sobre certificación Angus, fermentación de masa brioche y salsas de receta secreta.
+  * **Footer de 5 Columnas de Alto Impacto**: Enlaces rápidos, atención al cliente, datos de contacto, redes sociales y badges para tiendas de aplicaciones móvil.
 
 ---
 
@@ -336,16 +341,26 @@ docker run -d -p 3000:3000 --name hamburger-rapid-app hamburger-rapid:1.0
 
 ---
 
-## 🎨 Sistema de Diseño y Paleta Clara Premium
+## 🎨 Sistema de Diseño y Referencia Visual
 
-Toda la plataforma sigue una guía de estilo visual cálida, clara y artesanal:
+### Estilo Visual del Landing E-Commerce (`apps/ecommerce`)
+La capa pública de aterrizaje comercial adopta fielmente la composición visual, paleta de colores y componentes interactivos referenciados en **`assets-references\imagenes\imagen001.jpg`**:
 
-* **Lienzo Principal**: `#fbf9f5` / `#f8f6f0` (Marfil cálido y crema suave).
-* **Superficies y Tarjetas**: `#ffffff` (Blanco puro con sombras tenues `rgba(28,25,23,0.06)`).
-* **Acento Primario**: `#c2410c` (Terracota y fuego a la brasa).
-* **Acento Secundario**: `#b45309` / `#d97706` (Ámbar dorado y queso cheddar curado).
-* **Tipografía**: `#1c1917` (Chocolate espresso para encabezados) y `#57534e` (Cálido neutro para lectura).
-* **Insignias**: Tonos pastel cálidos con texto de alto contraste (`#fef3c7` / `#92400e`).
+* **Fondo Base (Dark Theme)**: `#070708` / `#000000` con resplandor radial cálido (`rgba(255, 183, 3, 0.15)`).
+* **Superficies y Tarjetas de Producto**: `#141417` con bordes sutiles `#242429` y sombras profundas.
+* **Acento Principal (Cheddar Gold)**: `#ffb703` / `#f59e0b` (utilizado en el titular `"FAST & FRESH"`, precios, insignias, botones píldora `ORDER NOW` y botones de adición circular `+`).
+* **Barra Flotante de Categorías**: Card flotante en blanco `#ffffff` con elevación y micro-interacciones al pasar el cursor.
+* **Banner de Promoción**: Card de impacto en `#ffb703` con reloj analógico, código de cupón `WELCOME20` y repartidor en scooter.
+* **Tipografías**:
+  * *Montserrat* (ExtraBold / Black) para titulares comerciales de alto impacto.
+  * *Plus Jakarta Sans* para legibilidad óptima en descripciones y metadata.
+  * *Caveat* (Script) para frases insignia de autor (*"Cravings, Satisfied"* y *"Popular Picks"*).
+
+### Estilo de las Capas Internas (PWA Móvil & Dashboard Admin)
+Las capas operativas (`apps/pwa` y `apps/admin`) mantienen su paleta funcional clara y artesanal:
+* **Lienzo**: `#fbf9f5` / `#ffffff` con sombras tenues.
+* **Acentos**: Terracota `#c2410c` y ámbar curado `#b45309`.
+* **Tipografía**: `#1c1917` (espresso) y `#57534e` (cálido neutro).
 
 ---
 
